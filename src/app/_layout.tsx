@@ -9,12 +9,8 @@ export default function _layout() {
         <Stack.Screen
             name='(tabs)'
             options={{
+                headerShown: false,
                 title: 'Home'
-            }}
-        />
-        <Stack.Screen
-            name='index'
-            options={{
             }}
         />
     </Stack>

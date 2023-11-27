@@ -1,3 +1,4 @@
+import Teste from "@/components/Teste";
 import { View, Text } from "react-native";
 
 export default function Home () {
@@ -6,6 +7,7 @@ export default function Home () {
             <Text style={{fontSize: 44}}>
                 Home
             </Text>
+            <Teste />
         </View>
     )
 }
