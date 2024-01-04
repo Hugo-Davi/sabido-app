@@ -15,14 +15,14 @@ export interface IThemeValues {
     name: string;
 }
 
-const light: IThemeValues = {
+export const light: IThemeValues = {
     background: '#D9D9D9',
     foreground: '#FEF6FF',
     border: '#242527',
     name: 'light'
 }
 
-const dark: IThemeValues = {
+export const dark: IThemeValues = {
     background: '#1E1E1E',
     foreground: '#242527',
     border: '#DBDBDB',

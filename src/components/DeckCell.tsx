@@ -1,8 +1,11 @@
 import { View, Text, Button } from 'react-native'
 import React from 'react'
+import { useThemeContext } from '@/contexts/UseThemeContext'
 
 
 export default function DeckCell() {
+  const { theme, color, setTheme } = useThemeContext()
+
   return (
     <View style={{backgroundColor: 'red'}}>
         <View>
@@ -10,7 +13,7 @@ export default function DeckCell() {
         </View>
         <View>
             <Button
-              onPress={() => console.log('bom dia familia')}
+              onPress={() => setTheme}
               title='Study'
               color='000'
             />

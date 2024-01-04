@@ -1,5 +1,5 @@
-import React, { ReactNode, createContext, useState } from 'react';
-import { IThemeValues, IThemeState, themeState } from '@/constants/Themes';
+import React, { ReactNode, createContext, useReducer, useState } from 'react';
+import { IThemeValues, IThemeState, themeState, dark, light } from '@/constants/Themes';
 
 // TYPES - BEGIN
 type PropThemeContextType = {
