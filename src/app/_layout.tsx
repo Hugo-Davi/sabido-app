@@ -7,12 +7,11 @@ import { ThemeContextProvider } from '@/contexts/ThemeContext'
 import { useThemeContext } from '@/contexts/UseThemeContext'
 
 export default function _layout() {
-  const theme = useThemeContext()
+  const { theme, color } = useThemeContext()
   return (
-    <ThemeContextProvider>
     <Stack
         screenOptions={{
-          contentStyle: { backgroundColor: theme.state.background }
+          contentStyle: { backgroundColor: 'red' }
         }}>
         <Stack.Screen
             name='(tabs)'
@@ -22,6 +21,5 @@ export default function _layout() {
             }}
         />
     </Stack>
-    </ThemeContextProvider>
   )
 }

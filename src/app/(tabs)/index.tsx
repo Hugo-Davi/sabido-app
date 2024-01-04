@@ -4,13 +4,10 @@ import DeckCell from "@/components/DeckCell";
 import { useThemeContext } from "@/contexts/UseThemeContext";
 
 export default function Home () {
-    const theme = useThemeContext();
+    const { theme, color } = useThemeContext();
 
     return (
-        <View style={{backgroundColor: theme.state.background}}>
-            <Text style={{fontSize: 44}}>
-                Home
-            </Text>
+        <View style={{backgroundColor: theme.background}}>
             <Teste />
             <DeckCell />
         </View>

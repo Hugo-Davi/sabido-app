@@ -1,11 +1,10 @@
 import React, { ReactNode, createContext, useState } from 'react';
-import { theme } from '@/constants/Themes';
-import { IThemeValues } from '@/interfaces/ITheme';
+import { IThemeValues, IThemeState, themeState } from '@/constants/Themes';
 
 // TYPES - BEGIN
 type PropThemeContextType = {
-    state: IThemeValues;
-    setState: React.Dispatch<React.SetStateAction<IThemeValues>>;
+    state: IThemeState;
+    setState: React.Dispatch<React.SetStateAction<IThemeState>>;
 }
 type ChildrenProp = {
     children: React.ReactNode;
@@ -14,7 +13,7 @@ type ChildrenProp = {
 
 const DEFAULT_VALUE = {
     state: {
-        ...theme.dark
+        ...themeState
     },
     setState: () => {}
 }

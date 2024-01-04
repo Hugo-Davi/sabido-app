@@ -3,7 +3,6 @@ import { Tabs } from "expo-router";
 
 import { MaterialCommunityIcons } from "@expo/vector-icons"
 import { Ionicons } from '@expo/vector-icons';
-import { selectedTheme } from '@/constants/Themes';
 
 export default function TabRoutesLayout() {
     return(
