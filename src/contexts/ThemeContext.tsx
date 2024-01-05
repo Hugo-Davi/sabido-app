@@ -1,5 +1,5 @@
 import React, { ReactNode, createContext, useReducer, useState } from 'react';
-import { IThemeValues, IThemeState, themeState, dark, light } from '@/constants/Themes';
+import { IThemeValues, IThemeState, themeState, defaultcolor, dark, light } from '@/constants/Themes';
 
 // TYPES - BEGIN
 type PropThemeContextType = {
@@ -10,6 +10,33 @@ type ChildrenProp = {
     children: React.ReactNode;
 }
 // TYPES - END
+
+// const setTheme = (selectedTheme: string) => {
+//     console.log('settheme processado')
+//     switch (selectedTheme) {
+//         case 'dark':
+//             const darkTheme:IThemeState = {
+//                 theme: dark,
+//                 defaultcolor: defaultcolor
+//             }
+//             setState(darkTheme)
+//             break;
+//         case 'light':
+//             const lightTheme:IThemeState = {
+//                 theme: light,
+//                 defaultcolor: defaultcolor
+//             }
+//             setState(lightTheme)
+//             break;
+//         default:
+//             const defaultTheme:IThemeState = {
+//                 theme: dark,
+//                 defaultcolor: defaultcolor
+//             }
+//             setState(defaultTheme)
+//             break;
+//     }
+// }
 
 const DEFAULT_VALUE = {
     state: {

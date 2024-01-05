@@ -1,16 +1,19 @@
 import { useContext } from "react"
 import { ThemeContext } from "./ThemeContext"
+import { dark, light, defaultcolor } from '@/constants/Themes'
 
 const useThemeContext = () => {
-    const themeContext = useContext(ThemeContext);
+    const {state, setState} = useContext(ThemeContext);
 
-    if (themeContext === undefined) {
+    if (state === undefined) {
         throw new Error('useThemeContext themeContext === undefined error')
     }
 
-    const color = themeContext.state.defaultcolor;
-    const theme = themeContext.state.theme;
-    const setTheme = themeContext.setState;
+    setState({theme: light, defaultcolor: defaultcolor})
+
+    const color = state.defaultcolor;
+    const theme = state.theme;
+    const setTheme = setState // themeContext.setState;
 
     return {theme, color, setTheme};
 }
