@@ -50,7 +50,7 @@ export interface IThemeState {
 
 export const themeState: IThemeState = {
     theme: {
-        ...dark
+        ...light
     },
     defaultcolor: {
         ...defaultcolor

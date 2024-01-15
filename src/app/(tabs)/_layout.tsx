@@ -17,8 +17,24 @@ export default function TabRoutesLayout() {
                     elevation: 0,
                 }
             }}>
-            <Tabs.Screen
-                name= "index"
+                <Tabs.Screen
+                    name='home'
+                    options= {{
+                        title: 'Home',
+                        tabBarIcon: ({color, size}) => <MaterialCommunityIcons name="cards-outline"
+                        color={color} size={size * 1.75} />
+                    }}
+                />
+                <Tabs.Screen
+                    name='index'
+                    options= {{
+                        title: 'Painel',
+                        tabBarIcon: ({color, size}) => <MaterialCommunityIcons name="cards-outline"
+                        color={color} size={size * 1.75} />
+                    }}
+                />
+            {/* <Tabs.Screen
+                name= "home"
                 options= {{
                     title: "Home",
                     tabBarIcon: ({color, size}) => <MaterialCommunityIcons name="cards-outline"
@@ -33,7 +49,7 @@ export default function TabRoutesLayout() {
                     tabBarIcon: ({color, size}) => <Ionicons name="ios-person-circle"
                     color={color} size={size * 1.75} />
                 }}
-            />
+            /> */}
         </Tabs>
     )
 }
